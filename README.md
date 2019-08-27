@@ -14,10 +14,13 @@ Development and Test
   bundle install
   rake db:setup
 ```
+NB: setup only adds seeds to the dev db.
+
 To seed test database:
 ```
   RACK_ENV=test rake db:setup
 ```
+This is already handled in rspec
 
 `rake db:setup` will wipe `makersbnb_test`. To reseed run ` RACK_ENV=test rake db:create`. This can still be run with a connection to the database.
 

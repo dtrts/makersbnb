@@ -8,7 +8,7 @@ end
 describe 'Test db can be accessed' do
   it 'returns a record' do
     result = Listing.all
-    p result
+    puts "There are #{result.length} records holla at ya db"
     expect(result[0].name).to eq('Old Kent Road')
   end
 end

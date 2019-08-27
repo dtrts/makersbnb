@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-# Active Records Schema allows programmers to programmatically define a schema 
-# in a portable DSL (domain specific language). This means you can define tables, indexes, etc. 
+# Active Records Schema allows programmers to programmatically define a schema
+# in a portable DSL (domain specific language). This means you can define tables, indexes, etc.
 # without using SQL directly, so your applications can more easily support multiple databases.
 ActiveRecord::Schema.define(version: 0) do
-  # These are extensions that must be enabled in order to support this database. 
+  # These are extensions that must be enabled in order to support this database.
   # This enables a programming language that allows user to do complex operations.
   # This is included with postgres
   enable_extension 'plpgsql'

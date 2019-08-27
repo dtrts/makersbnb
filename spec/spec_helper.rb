@@ -24,8 +24,14 @@ rake = Rake.application
 rake.load_rakefile
 
 RSpec.configure do |config|
-  config.before(:each) do
-    Rake::Task['db:setup'].invoke # this respects the env setting where as the other option doesn't # rake['db:setup'].execute
+  config.before(:suite) do
+    rake['db:create'].execute
+    rake['db:setup'].execute
+  end
+
+  config.before(:all) do
+    Listing.delete_all
+    rake['db:seed'].execute
   end
 
   config.expect_with :rspec do |expectations|
