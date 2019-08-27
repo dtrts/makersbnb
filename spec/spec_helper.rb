@@ -6,6 +6,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'rake'
+require 'capybara_table/rspec'
 
 require 'simplecov'
 require 'simplecov-console'
