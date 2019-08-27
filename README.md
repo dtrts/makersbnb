@@ -3,10 +3,26 @@
 
 ## Setup
 
+Production
+```
+  bundle install --without=development --without=test
+  RACK_ENV=production rake db:create
+  RACK_ENV=production rake db:schema:load
+```
+Development and Test
 ```
   bundle install
   rake db:setup
 ```
+To seed test database:
+```
+  RACK_ENV=test rake db:setup
+```
+
+`rake db:setup` will wipe `makersbnb_test`. To reseed run ` RACK_ENV=test rake db:create`. This can still be run with a connection to the database.
+
+Rspec will reseed the test db before each test.
+
 
 ## Branching
 ```
