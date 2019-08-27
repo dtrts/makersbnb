@@ -7,7 +7,6 @@ end
 
 describe 'Test db can be accessed' do
   it 'returns a record' do
-    Listing.create(name: 'asd')
     result = Listing.all
     p result
     expect(result[0].name).to eq('Old Kent Road')
