@@ -1,7 +1,8 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/hello_world_spec.rb": [
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/features/Viewing_homepage_spec.rb": [
+        1,
         1,
         1,
         1,
@@ -10,6 +11,6 @@
         null
       ]
     },
-    "timestamp": 1566912352
+    "timestamp": 1566915487
   }
 }

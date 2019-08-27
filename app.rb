@@ -13,7 +13,8 @@ class MakersBnB < Sinatra::Base
   set :public_folder, File.dirname(__FILE__) + '/public'
 
   get '/' do
-    'Hello World'
+
+    erb :index
   end
 
   # enable :method_override
