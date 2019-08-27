@@ -33,6 +33,8 @@ Wire frame:
 - index.html - shows the current listings and a link to new listing
 - list.html - form to generate a new listing.
 
+
+
 Information Gathered:
   - Name
   - Description (tell the silly users to include contact details)
@@ -64,6 +66,11 @@ Validation:
 Tables:
 listing (id serial primary key ,name varchar(255),description varchar(255), price_per_night decimal(5,2) ,start_date ,end_date)
 dates available? (id serial primary key , listing_id integer ,start_date date ,end_date  date)
+
+
+## Wire frames
+![Image of Listing Wireframe](https://raw.githubusercontent.com/dtrts/makersbnb/master/images/listing_wireframe.png)
+
 
 
 
