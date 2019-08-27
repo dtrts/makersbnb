@@ -1,3 +1,5 @@
+# This defines the connection to the database based on the RACK_ENV.
+# If RACK_ENV isn't set, the default is development.
 default: &default
   adapter: postgresql
   encoding: unicode
