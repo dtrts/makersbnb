@@ -1,6 +1,20 @@
 # Team Cinco Cicadas
 
 
+## Setup
+
+```
+  bundle install
+
+```
+
+## Branching
+```
+git branch #new_branch_name
+git checkout #new_branch_name
+```
+
+
 
 ## Timings:
 9.30 Coffee
