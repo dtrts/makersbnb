@@ -8,3 +8,7 @@ if ENV['RACK_ENV'] != 'production'
 
   task default: [:spec]
 end
+
+task :fun_task do
+  puts 'yay so much fun'
+end

@@ -11,6 +11,10 @@
         1,
         null,
         1,
+        null,
+        null,
+        1,
+        0,
         null
       ],
       "/Users/potato/code/makers/repos/makersbnb/spec/features/hello_world_spec.rb": [
@@ -30,6 +34,6 @@
         null
       ]
     },
-    "timestamp": 1566928707
+    "timestamp": 1566983910
   }
 }
