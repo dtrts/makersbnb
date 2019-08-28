@@ -25,6 +25,8 @@ To seed test database:
   RACK_ENV=test rake db:setup
 ```
 
+
+
 This is already handled in rspec like so:
 ```ruby
 ENV['RACK_ENV'] = 'test'
@@ -134,3 +136,10 @@ Hello world.
 
 
 Sign-up moved to v2.
+
+## Appendix
+
+Fun display of git history
+```
+git log --oneline --graph
+```

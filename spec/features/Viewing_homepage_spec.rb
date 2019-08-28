@@ -1,13 +1,18 @@
 feature 'Homepage' do
-  it 'has a title listings and a button' do
+  before(:each) do
     visit('/')
+  end
+
+  scenario 'has a title listings and a button' do
     expect(page).to have_content('MakersBnB')
     expect(page).to have_button('List Your Space')
   end
-  feature 'table' do
-    it 'has content in the table' do
-      visit('/')
-      expect(find(:table, "Listings")).to have_table_row("Name" => "London flat")
+
+  feature 'display listings' do
+    scenario 'has first seed listing' do
+      first_listing = find(:xpath, '//div[@class="listing"][1]')
+      expect(first_listing).to have_content('My House')
+      expect(first_listing).to have_content('£100.99')
     end
   end
 end
