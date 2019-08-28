@@ -59,40 +59,32 @@
     margin-left: .5em;
   }
 </style>
-<form action="/list_space" method="post">
+<form action="/listings/new" method="post">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
-  </div>
-
-
-  <div>
-    <label for="name">Price Per Night:</label>
-    <input type="text" id="name" name="price">
+    <input type="text" name="name">
   </div>
 
   <div>
-    <label for="mail">Start-Date:</label>
-    <input type="text" id="name" name="start-date">
+    <label for="price">Price Per Night:</label>
+    <input type="number" name="price_per_night" >
   </div>
 
   <div>
-    <label for="mail">End-Date:</label>
-    <input type="text" id="name" name="start-date">
+    <label for="start_date">Start-Date:</label>
+    <input type="date" name="start_date">
   </div>
-
 
   <div>
-    <label for="msg">Description:</label>
-    <textarea id="msg" name="description"></textarea>
+    <label for="end_date">End-Date:</label>
+    <input type="date" name="end_date">
   </div>
+  
+  <div>
+  <label for="description">Description:</label>
+  <textarea name="description"></textarea>
+</div>
 
-  <div class="button">
-    <button type="reset">reset</button>
-  </div>
-
-  <div class="button">
-    <button type="submit">submit your Listing</button>
-  </div>
-
+  <input type="submit" value="Submit your listing" />
 </form>
+

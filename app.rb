@@ -18,9 +18,13 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
-  get '/list_space' do
-
+  get '/listings/new' do
     erb :list_space
+  end
+
+  post '/listings/new' do
+    Listing.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], start_date: params[:start_date], end_date: params[:end_date])
+    redirect '/'
   end
 
   # enable :method_override
