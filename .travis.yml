@@ -9,5 +9,5 @@ services:
 
 before_script:
   - bundle install
-  - rake db:create db:schema:load
-  - RACK_ENV=test db:seed
+  - bundle exec rake db:create db:schema:load
+  - RACK_ENV=test bundle exec db:seed
