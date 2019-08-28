@@ -1,7 +1,27 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/hannaaikas/Projects/makersbnb/spec/features/Viewing_homepage_spec.rb": [
+=======
+      "/Users/potato/code/makers/repos/makersbnb/rakefile": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null
+      ],
+      "/Users/potato/code/makers/repos/makersbnb/spec/features/hello_world_spec.rb": [
+>>>>>>> 2f6303c606710eb8cb5deed03e2982cd74333e59
         1,
         1,
         1,
@@ -13,10 +33,22 @@
         1,
         1,
         null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1566917368
+=======
+    "timestamp": 1566983910
+>>>>>>> 2f6303c606710eb8cb5deed03e2982cd74333e59
   }
 }

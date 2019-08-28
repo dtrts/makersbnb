@@ -4,6 +4,7 @@ require 'sinatra/flash'
 # Active Record
 require 'sinatra/activerecord'
 require 'active_record'
+require_relative './models/listing.rb'
 
 class MakersBnB < Sinatra::Base
   register Sinatra::Reloader

@@ -1,0 +1,14 @@
+require 'sinatra/activerecord'
+require 'sinatra/activerecord/rake'
+# Guard clause for running a production environment. Doesn't run spec file as it could wipe database.
+if ENV['RACK_ENV'] != 'production'
+  require 'rspec/core/rake_task'
+
+  RSpec::Core::RakeTask.new :spec
+
+  task default: [:spec]
+end
+
+task :fun_task do
+  puts 'yay so much fun'
+end
