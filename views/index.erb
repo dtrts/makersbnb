@@ -4,8 +4,31 @@
   <input type="submit" value="List Your Space" />
 </form>
 
-<div class='listings'>
 
+<div class="user-interactions">
+  <% if @user %>
+  <div class="user-welcome">Hello, <%= @user.name %> </div>
+  <form action="/session" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Log Out" />
+  </form>
+
+  <% else %>
+
+
+  <form action="/session/new" method="get">
+    <input type="submit" value="Log In" />
+  </form>
+  <form action="/user/new" method="get">
+    <input type="submit" value="Sign Up" />
+  </form>
+
+  <% end %>
+
+</div>
+
+
+<div class='listings'>
   <% @listings.each do |listing| %>
   <div class='listing' id='listing-<%= listing.id %>'>
     <div class='listing-name'><em><%= listing.name %></em></div>

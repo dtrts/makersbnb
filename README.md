@@ -81,11 +81,13 @@ User stories:
 - Users can list multiple spaces.
 - Users should be able to name their space, provide a short description of the space, and a price per night.
 - Users should be able to offer a range of dates where their space is available.
+- Any signed-up user can list a new space
 
 Wire frame:
-2 pages
 - index.html - shows the current listings and a link to new listing
 - list.html - form to generate a new listing.
+- users/new - form to sign up
+- sessions/new - form to sign in
 
 
 

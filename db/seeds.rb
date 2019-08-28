@@ -33,7 +33,7 @@ Listing.create(
   end_date: '2020-02-13'
 )
 
-# User Seed
+# # User Seed
 admin_account = User.new(
   username: 'admin',
   name: 'admin',

@@ -11,13 +11,39 @@ class MakersBnB < Sinatra::Base
   register Sinatra::Reloader
   register Sinatra::Flash
   register Sinatra::ActiveRecordExtension
-  enable :sessions
+
+  enable :sessions, :method_override
+
   set :public_folder, File.dirname(__FILE__) + '/public'
 
   get '/' do
+    @user = User.find(session[:user_id]) if session[:user_id]
     @listings = Listing.all.order(:start_date)
     erb :index
   end
 
-  # enable :method_override
+  get '/session/new' do
+    erb :"session/new"
+  end
+
+  post '/session/new' do
+    @user = User.find_by_username(params[:username])
+    if @user
+      session[:user_id] = @user.id if @user.password == params[:password]
+    end
+    redirect('/')
+  end
+
+  delete '/session' do
+    session[:user_id] = nil
+    redirect('/')
+  end
+
+  # get '/user/new' do
+  #   erb :"user/new"
+  # end
+
+  # post '/user/new' do
+  #   redirect('/')
+  # end
 end
