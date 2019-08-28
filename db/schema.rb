@@ -28,4 +28,13 @@ ActiveRecord::Schema.define(version: 0) do
     t.date 'end_date'
     t.timestamps
   end
+
+  create_table 'users', id: :serial, force: :cascade do |t|
+    t.string 'username', limit: 255
+    t.string 'password_hash', limit: 255
+    t.string 'name', limit: 255
+    t.string 'email', limit: 255
+    t.string 'telephone', limit: 255
+    t.timestamps
+  end
 end
