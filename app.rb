@@ -14,7 +14,7 @@ class MakersBnB < Sinatra::Base
   set :public_folder, File.dirname(__FILE__) + '/public'
 
   get '/' do
-
+    @listings = Listing.all.order(:start_date)
     erb :index
   end
 
