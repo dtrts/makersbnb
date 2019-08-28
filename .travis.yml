@@ -1,8 +1,6 @@
+language: ruby
+
 rvm: '2.6.3'
-
-script:
-  - mkdir -p spec && bundle exec rspec spec
-
 
 services:
   - postgresql
@@ -11,3 +9,6 @@ before_script:
   - bundle install
   - bundle exec rake db:create db:schema:load
   - RACK_ENV=test bundle exec rake db:seed
+
+script:
+- mkdir -p spec && bundle exec rspec spec
