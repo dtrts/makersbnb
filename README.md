@@ -1,6 +1,60 @@
 # Team Cinco Cicadas
 
 
+## Setup
+
+Production
+```
+  bundle install --without=development --without=test
+  RACK_ENV=production rake db:create
+  RACK_ENV=production rake db:schema:load
+  rackup
+```
+
+Development and Test
+```
+  bundle install
+  rake db:create
+  rake db:schema:load
+  rake db:seed
+```
+NB: setup only adds seeds to the dev db.
+
+To seed test database:
+```
+  RACK_ENV=test rake db:setup
+```
+
+This is already handled in rspec like so:
+```ruby
+ENV['RACK_ENV'] = 'test'
+
+RSpec.configure do |config|
+  config.before(:suite) do
+    rake['db:create'].execute
+    rake['db:schema:load'].execute
+  end
+
+  config.before(:all) do
+    Listing.delete_all
+    rake['db:seed'].execute
+  end
+end
+```
+
+
+`rake db:setup` will wipe `makersbnb_test`. To reseed run ` RACK_ENV=test rake db:create`. This can still be run with a connection to the database.
+
+Rspec will reseed the test db before each test.
+
+
+## Branching
+```
+git branch #new_branch_name
+git checkout #new_branch_name
+```
+
+
 
 ## Timings:
 9.30 Coffee
