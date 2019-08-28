@@ -18,5 +18,10 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
+  get '/list_space' do
+
+    erb :list_space
+  end
+
   # enable :method_override
 end
