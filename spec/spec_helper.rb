@@ -31,6 +31,7 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do
+    User.delete_all
     Listing.delete_all
     rake['db:seed'].execute
   end

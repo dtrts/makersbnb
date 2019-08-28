@@ -1,5 +1,7 @@
 # require 'active_record'
 require_relative '../models/listing.rb'
+require_relative '../models/user.rb'
+
 Listing.create(
   name: 'Old Kent Road \n#{address}\n#{phone number}\n#{email address}',
   description: 'Do not pass go',
@@ -30,3 +32,13 @@ Listing.create(
   start_date: '2020-02-01',
   end_date: '2020-02-13'
 )
+
+# User Seed
+admin_account = User.new(
+  username: 'admin',
+  name: 'admin',
+  email: 'email@address.com',
+  telephone: '+441234567890'
+)
+admin_account.password = 'password'
+admin_account.save!

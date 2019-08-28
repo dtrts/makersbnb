@@ -14,9 +14,7 @@ Production
 Development and Test
 ```
   bundle install
-  rake db:create
-  rake db:schema:load
-  rake db:seed
+  rake db:create db:schema:load db:seed
 ```
 NB: setup only adds seeds to the dev db.
 
@@ -146,3 +144,13 @@ git log --oneline --graph
 
 Using bcrypt for password storage
 https://github.com/codahale/bcrypt-ruby
+
+
+Adding a new table:
+ - Add create_table #{table_name} to ./db/schema.rb
+ - Create ./models/#{table_name}.rb
+ - Add require_relative './models/#{table_name}.rb' to ./app.rb
+ - Add require_relative '../models/#{table_name}.rb' to ./spec/irb_helper.rb
+ - Add seed records for testing in ./db/seed.rb using active record methods.
+ - Add Table.delete_all to ./spec/spec_helper.rb
+ - Run `rake db:drop db:create db:schema:load` to refresh the database structures
