@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Documents/Projects/makersbnb/rakefile": [
+      "/Users/potato/code/makers/repos/makersbnb/rakefile": [
         1,
         1,
         null,
@@ -17,7 +17,22 @@
         0,
         null
       ],
-      "/Users/student/Documents/Projects/makersbnb/spec/features/Viewing_homepage_spec.rb": [
+      "/Users/potato/code/makers/repos/makersbnb/spec/access_user_seeds_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/potato/code/makers/repos/makersbnb/spec/features/Viewing_homepage_spec.rb": [
         1,
         1,
         2,
@@ -37,7 +52,7 @@
         null,
         null
       ],
-      "/Users/student/Documents/Projects/makersbnb/spec/features/add_listings_spec.rb": [
+      "/Users/potato/code/makers/repos/makersbnb/spec/features/add_listings_spec.rb": [
         null,
         1,
         1,
@@ -70,7 +85,7 @@
         null,
         null
       ],
-      "/Users/student/Documents/Projects/makersbnb/spec/features/hello_world_spec.rb": [
+      "/Users/potato/code/makers/repos/makersbnb/spec/features/hello_world_spec.rb": [
         null,
         null,
         null,
@@ -85,8 +100,73 @@
         null,
         null,
         null
+      ],
+      "/Users/potato/code/makers/repos/makersbnb/spec/features/user_interactions_spec.rb": [
+        1,
+        1,
+        4,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1567009312
+    "timestamp": 1567012312
   }
 }
