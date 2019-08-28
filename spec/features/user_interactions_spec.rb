@@ -23,10 +23,41 @@ feature 'User interactions' do
       expect(page).not_to have_content('admin')
       expect(page).not_to have_button('Log Out')
       expect(page).to have_button('List Your Space')
-      expect(current_path).to eq('/')
+      expect(page).to have_current_path('/')
     end
   end
 
   feature 'user sign up' do
+    scenario 'new user creation' do
+      click_button('Sign Up')
+      fill_in('Username:', with: 'coffee_cup')
+      fill_in('Password:', with: 'java')
+      fill_in('Name:', with: 'Ms. Coffee')
+      fill_in('Email:', with: 'coffee@jitters.org')
+      fill_in('Telephone:', with: '+441234567890')
+      click_button('Submit')
+      expect(page).to have_current_path('/')
+      expect(page).to have_content('Ms. Coffee')
+      expect(page).to have_button('Log Out')
+    end
+
+    scenario 'new user creation' do
+      click_button('Sign Up')
+      fill_in('Username:', with: 'coffee_cup')
+      fill_in('Password:', with: 'java')
+      fill_in('Name:', with: 'Ms. Coffee')
+      fill_in('Email:', with: 'coffee@jitters.org')
+      fill_in('Telephone:', with: '+441234567890')
+      click_button('Submit')
+      click_button('Log Out')
+      click_button('Log In')
+      fill_in('Username:', with: 'coffee_cup')
+      fill_in('Password:', with: 'java')
+      click_button('Submit')
+
+      expect(page).to have_current_path('/')
+      expect(page).to have_content('Ms. Coffee')
+      expect(page).to have_button('Log Out')
+    end
   end
 end
