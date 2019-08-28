@@ -143,3 +143,6 @@ Fun display of git history
 ```
 git log --oneline --graph
 ```
+
+Using bcrypt for password storage
+https://github.com/codahale/bcrypt-ruby

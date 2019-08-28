@@ -17,6 +17,15 @@
         0,
         null
       ],
+      "/Users/potato/code/makers/repos/makersbnb/spec/access_user_seeds_spec.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/potato/code/makers/repos/makersbnb/spec/features/Viewing_homepage_spec.rb": [
         1,
         1,
@@ -76,6 +85,6 @@
         null
       ]
     },
-    "timestamp": 1566989795
+    "timestamp": 1566990640
   }
 }

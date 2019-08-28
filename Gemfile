@@ -24,3 +24,5 @@ end
 gem "sinatra-contrib", "~> 2.0"
 
 gem "sinatra-flash", "~> 0.3.0"
+
+gem "bcrypt", "~> 3.1"
