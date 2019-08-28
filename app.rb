@@ -39,11 +39,20 @@ class MakersBnB < Sinatra::Base
     redirect('/')
   end
 
-  # get '/user/new' do
-  #   erb :"user/new"
-  # end
+  get '/user/new' do
+    erb :"user/new"
+  end
 
-  # post '/user/new' do
-  #   redirect('/')
-  # end
+  post '/user/new' do
+    @user = User.new(
+      username: params[:username],
+      name: params[:name],
+      email: params[:email],
+      telephone: params[:telephone]
+    )
+    @user.password = params[:password]
+    @user.save!
+    session[:user_id] = @user.id
+    redirect('/')
+  end
 end
