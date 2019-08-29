@@ -3,9 +3,8 @@ feature 'Homepage' do
     visit('/')
   end
 
-  scenario 'has a title listings and a button' do
+  scenario 'has title' do
     expect(page).to have_content('MakersBnB')
-    expect(page).to have_button('List Your Space')
   end
 
   feature 'display listings' do
