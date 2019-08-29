@@ -7,6 +7,7 @@ html,
 body {
   margin: 0px;
   padding: 0px;
+
 }
 
 header {
@@ -15,13 +16,12 @@ header {
   background-position: bottom;
   background-size: cover;
   position: relative;
-  height: 680px;
-  padding: 180px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 77px;
   overflow: hidden;
+}
+
+form {
+  margin: 0;
 }
 
 .user-interactions {
@@ -32,18 +32,6 @@ header {
   flex-direction: row;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-
-form {
-  margin: 0;
-}
-
-/* .user-welcome {
-  position: absolute;
-  direction: row;
-  width: 100px;
-  height: 50px;
-} */
 
 .home-logo {
   background: transparent;
@@ -57,8 +45,8 @@ button {
   background: transparent;
   color: white;
   font-family: inherit;
-  font-size: 18px;
   border: none;
+  font-size: 18px;
   text-decoration: none;
   letter-spacing: 0.15em;
 }
@@ -87,46 +75,7 @@ button {
   left: 0;
 }
 
+
 #img-home-logo {
   width: 200px;
 }
-
-.spacer {
-  height: 50px;
-}
-
-.listings-header {
-  text-align: center;
-  letter-spacing: 0.3em
-}
-
-.listings {
-  display: flex;
-  flex-flow: row wrap;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
-  justify-content: center;
-}
-
-.listing {
-  width: 300px;
-  padding: 0px;
-  margin: 25px;
-}
-
-.listing-image {
-  width: 100%;
-  height: 120px;
-}
-
-.listing-details {
-  padding: 5px;
-
-}
-
-.listing-description {
-  font-size: 90%;
-  margin: 5px 0px
-}
-
-.listing-price-per-night {}

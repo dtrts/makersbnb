@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link href="/style.css" rel="stylesheet" type="text/css">
+  <link href="/style_forms.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -12,10 +12,6 @@
     <div class="home-logo">
       <a href="/"><img id="img-home-logo" src="/images/makersbnb.png" alt="logo" /></a>
     </div>
-
-    <h1> MakersBnB </h1>
-    <p> Find the perfect remote cabin to invite your cohort friends! </p>
-    <p> All locations off the grid, shovels provided. </p>
 
     <div class="user-interactions">
       <% if @user %>
@@ -46,33 +42,12 @@
         </form>
       </div>
       <% end %>
+
     </div>
   </header>
-  <div class="spacer">
+
+  <div class="main-form">
+    <%= yield %>
   </div>
 
-  <div class="listings-header">
-    <h1>Listings</h1>
-  </div>
-
-  <div class='listings'>
-    <% @listings.each do |listing| %>
-    <div class='listing' id='listing-<%= listing.id %>'>
-      <img class="listing-image" src="/images/listings/listing_img_001.jpg">
-      <div class="listing-details">
-
-        <div class='listing-name'>
-          <h2><%= listing.name %></h2>
-        </div>
-        <div class='listing-description'><%= listing.description %></div>
-        <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
-        <div class='listing-start-date'><%= listing.start_date %></div>
-        <div class='listing-end-date'><%= listing.end_date %></div>
-      </div>
-    </div>
-    <% end %>
-
-  </div>
 </body>
-
-</html>
