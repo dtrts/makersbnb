@@ -1,10 +1,5 @@
 <h1> MakersBnB </h1>
 
-<form action="/listings/new">
-  <input type="submit" value="List Your Space" />
-</form>
-
-
 <div class="user-interactions">
 
   <% if @user %>
@@ -13,6 +8,9 @@
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Log Out" />
   </form>
+    <form action="/listings/new">
+      <input type="submit" value="List Your Space"/>
+    </form>
 
   <% else %>
 
@@ -37,6 +35,7 @@
     <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
     <div class='listing-start-date'><%= listing.start_date %></div>
     <div class='listing-end-date'><%= listing.end_date %></div>
+    <div class='listing-username'><%= listing.username %></div>
   </div>
   <% end %>
 

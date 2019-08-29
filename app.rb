@@ -61,7 +61,8 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/listings/new' do
-    Listing.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], start_date: params[:start_date], end_date: params[:end_date])
+    @user = User.find(session[:user_id]) if session[:user_id]
+    Listing.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], start_date: params[:start_date], end_date: params[:end_date], username: @user.username)
     redirect '/'
   end
 
