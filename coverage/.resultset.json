@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/potato/code/makers/repos/makersbnb/rakefile": [
+      "/Users/jspringer/repos/Makers/makersbnb/rakefile": [
         1,
         1,
         null,
@@ -17,7 +17,7 @@
         0,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/access_user_seeds_spec.rb": [
+      "/Users/jspringer/repos/Makers/makersbnb/spec/access_user_seeds_spec.rb": [
         1,
         1,
         1,
@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/Viewing_homepage_spec.rb": [
+      "/Users/jspringer/repos/Makers/makersbnb/spec/features/Viewing_homepage_spec.rb": [
         1,
         1,
         2,
@@ -52,7 +52,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/add_listings_spec.rb": [
+      "/Users/jspringer/repos/Makers/makersbnb/spec/features/add_listings_spec.rb": [
         null,
         1,
         1,
@@ -85,7 +85,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/hello_world_spec.rb": [
+      "/Users/jspringer/repos/Makers/makersbnb/spec/features/hello_world_spec.rb": [
         null,
         null,
         null,
@@ -101,7 +101,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/user_interactions_spec.rb": [
+      "/Users/jspringer/repos/Makers/makersbnb/spec/features/user_interactions_spec.rb": [
         1,
         1,
         4,
@@ -167,6 +167,6 @@
         null
       ]
     },
-    "timestamp": 1567012312
+    "timestamp": 1567073588
   }
 }
