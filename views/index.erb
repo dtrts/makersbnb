@@ -1,43 +1,105 @@
-<h1> MakersBnB </h1>
+<html>
 
-<form action="/listings/new">
-  <input type="submit" value="List Your Space" />
-</form>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    header {
+      background-image:url('/images/austin_dining.jpg');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover; 
+      position: relative;
+      height: 700px;
+      padding: 200px;
+      text-align: center;
+      color: white;
+      font-size: 30px;  
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .user-interactions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display:flex;
+      flex-direction: row;
+    }
+    .home-logo {
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+
+     background-color: blue; 
+    }
+  </style>
+</head>
+
+<body>
 
 
-<div class="user-interactions">
+  <header>
 
-  <% if @user %>
-  <div class="user-welcome">Hello, <%= @user.name %> </div>
-  <form action="/session" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Log Out" />
-  </form>
+    <div class="home-logo">
 
-  <% else %>
+    </div>
+
+    <h1> MakersBnB </h1>
+    <p> Find the perfect remote cabin to invite your cohort friends! </p>
+    <p> All locations off the grid, shovels provided. </p>
+
+    <div class="user-interactions">
+
+      <% if @user %>
+      <div class="user-welcome">Hello, <%= @user.name %> </div>
+      <form class="list_space" action="/listings/new" action="get">
+        <button type="submit">List Your Space</button>
+      </form>
+      <form action="/session" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">Log Out</button>
+      </form>
 
 
-  <form action="/session/new" method="get">
-    <input type="submit" value="Log In" />
-  </form>
-  <form action="/user/new" method="get">
-    <input type="submit" value="Sign Up" />
-  </form>
+      
 
-  <% end %>
-
-</div>
+      <% else %>
 
 
-<div class='listings'>
-  <% @listings.each do |listing| %>
-  <div class='listing' id='listing-<%= listing.id %>'>
-    <div class='listing-name'><em><%= listing.name %></em></div>
-    <div class='listing-description'><%= listing.description %></div>
-    <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
-    <div class='listing-start-date'><%= listing.start_date %></div>
-    <div class='listing-end-date'><%= listing.end_date %></div>
+      <form action="/session/new" method="get">
+        <input type="submit" value="Log In" />
+      </form>
+      <form action="/user/new" method="get">
+        <input type="submit" value="Sign Up" />
+      </form>
+
+      <% end %>
+
+    </div>
+  </header>
+
+
+  <div class='listings'>
+    <% @listings.each do |listing| %>
+    <div class='listing' id='listing-<%= listing.id %>'>
+      <div class='listing-name'><em><%= listing.name %></em></div>
+      <div class='listing-description'><%= listing.description %></div>
+      <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
+      <div class='listing-start-date'><%= listing.start_date %></div>
+      <div class='listing-end-date'><%= listing.end_date %></div>
+    </div>
+    <% end %>
+
   </div>
-  <% end %>
+</body>
 
-</div>
+</html>
