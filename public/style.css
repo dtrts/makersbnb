@@ -38,13 +38,6 @@ form {
   margin: 0;
 }
 
-/* .user-welcome {
-  position: absolute;
-  direction: row;
-  width: 100px;
-  height: 50px;
-} */
-
 .home-logo {
   background: transparent;
   position: absolute;
@@ -52,7 +45,10 @@ form {
   left: 0;
 }
 
-button {
+.user-welcome {}
+
+.fun-buttons form button,
+.user-welcome {
   padding: 0.7em 1em;
   background: transparent;
   color: white;

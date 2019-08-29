@@ -60,6 +60,7 @@ class MakersBnB < Sinatra::Base
 
   get '/listings/new' do
     @user = User.find(session[:user_id]) if session[:user_id]
+    redirect('/') unless @user
     erb :list_space, layout: :"layouts/forms"
   end
 

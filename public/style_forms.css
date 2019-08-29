@@ -40,7 +40,8 @@ form {
   left: 0;
 }
 
-button {
+.fun-buttons form button,
+.user-welcome {
   padding: 0.7em 1em;
   background: transparent;
   color: white;
@@ -78,4 +79,88 @@ button {
 
 #img-home-logo {
   width: 200px;
+}
+
+
+
+
+
+h1 {
+  color: #469d49;
+  text-align: center;
+  padding-top: 40px;
+
+}
+
+.main-form {
+  width: 400px;
+  background: #EDEDED;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+  width: 95%;
+  /* height: 100%; */
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  color: #469d49;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  background: none;
+  color: #469d49;
+  border: none;
+  border-bottom: 1px solid #469d49;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form-submit {
+  width: 100%;
+  height: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.2em;
+  color: #469d49;
+  transition: background 1s, color 1s;
+}
+
+.form-submit:hover {
+  background: #469d49;
+  color: #ECF0F1;
+  cursor: pointer;
+}
+
+
+button:focus {
+  outline: none;
 }
