@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jspringer/repos/Makers/makersbnb/rakefile": [
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/rakefile": [
         1,
         1,
         null,
@@ -17,7 +17,7 @@
         0,
         null
       ],
-      "/Users/jspringer/repos/Makers/makersbnb/spec/access_user_seeds_spec.rb": [
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/access_user_seeds_spec.rb": [
         1,
         1,
         1,
@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/Users/jspringer/repos/Makers/makersbnb/spec/features/Viewing_homepage_spec.rb": [
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/features/Viewing_homepage_spec.rb": [
         1,
         1,
         2,
@@ -47,11 +47,12 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
       ],
-      "/Users/jspringer/repos/Makers/makersbnb/spec/features/add_listings_spec.rb": [
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/features/add_listings_spec.rb": [
         null,
         1,
         1,
@@ -85,28 +86,28 @@
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/jspringer/repos/Makers/makersbnb/spec/features/hello_world_spec.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null,
         null
       ],
-      "/Users/jspringer/repos/Makers/makersbnb/spec/features/user_interactions_spec.rb": [
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/features/hello_world_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/features/user_interactions_spec.rb": [
         1,
         1,
         4,
@@ -172,8 +173,16 @@
         null,
         null,
         null
+      ],
+      "/Users/saidakmalov/Desktop/Projects/makersbnb/spec/listings_have_username_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1567077559
+    "timestamp": 1567086447
   }
 }

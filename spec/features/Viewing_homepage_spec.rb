@@ -12,6 +12,7 @@ feature 'Homepage' do
       first_listing = find(:xpath, '//div[@class="listing"][1]')
       expect(first_listing).to have_content('My House')
       expect(first_listing).to have_content('£100.99')
+      expect(first_listing).to have_content('admin')
     end
   end
 end

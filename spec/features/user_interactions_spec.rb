@@ -5,13 +5,13 @@ feature 'User interactions' do
 
   feature 'user sign in' do
     it 'signs in and displays my name' do
-      expect(page).not_to have_content('admin')
+      expect(page).not_to have_content('Hello, admin')
       expect(page).not_to have_button('Log Out')
       click_button('Log In')
       fill_in('Username:', with: 'admin')
       fill_in('Password:', with: 'password')
       click_button('Submit')
-      expect(page).to have_content('admin')
+      expect(page).to have_content('Hello, admin')
       expect(page).to have_button('Log Out')
       expect(page).to have_button('List Your Space')
     end
@@ -21,7 +21,7 @@ feature 'User interactions' do
       fill_in('Password:', with: 'password')
       click_button('Submit')
       click_button('Log Out')
-      expect(page).not_to have_content('admin')
+      expect(page).not_to have_content('Hello, admin')
       expect(page).not_to have_button('Log Out')
       expect(page).to have_current_path('/')
     end

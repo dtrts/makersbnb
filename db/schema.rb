@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.money 'price_per_night', scale: 2
     t.date 'start_date'
     t.date 'end_date'
+    t.string 'username', limit: 255
     t.timestamps
   end
 
