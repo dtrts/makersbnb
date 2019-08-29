@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+header {
+  background-image: url('/images/austin_dining.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  height: 77px;
+  overflow: hidden;
+}
+
+form {
+  margin: 0;
+}
+
+.user-interactions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.home-logo {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fun-buttons form button,
+.user-welcome {
+  padding: 0.7em 1em;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  border: none;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+
+.fun-buttons:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+
+
+.fun-buttons:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.fun-buttons:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+#img-home-logo {
+  width: 200px;
+}
+
+
+
+
+
+h1 {
+  color: #469d49;
+  text-align: center;
+  padding-top: 40px;
+
+}
+
+.main-form {
+  width: 400px;
+  background: #EDEDED;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+  width: 95%;
+  /* height: 100%; */
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  color: #469d49;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  background: none;
+  color: #469d49;
+  border: none;
+  border-bottom: 1px solid #469d49;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form-submit {
+  width: 100%;
+  height: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.2em;
+  color: #469d49;
+  transition: background 1s, color 1s;
+}
+
+.form-submit:hover {
+  background: #469d49;
+  color: #ECF0F1;
+  cursor: pointer;
+}
+
+
+button:focus {
+  outline: none;
+}

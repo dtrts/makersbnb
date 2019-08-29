@@ -23,7 +23,8 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/session/new' do
-    erb :"session/new"
+    @user = User.find(session[:user_id]) if session[:user_id]
+    erb :"session/new", layout: :"layouts/forms"
   end
 
   post '/session/new' do
@@ -40,7 +41,8 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/user/new' do
-    erb :"user/new"
+    @user = User.find(session[:user_id]) if session[:user_id]
+    erb :"user/new", layout: :"layouts/forms"
   end
 
   post '/user/new' do
@@ -57,7 +59,9 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/listings/new' do
-    erb :list_space
+    @user = User.find(session[:user_id]) if session[:user_id]
+    redirect('/') unless @user
+    erb :list_space, layout: :"layouts/forms"
   end
 
   post '/listings/new' do
@@ -65,6 +69,8 @@ class MakersBnB < Sinatra::Base
     Listing.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], start_date: params[:start_date], end_date: params[:end_date], username: @user.username)
     redirect '/'
   end
+
+  run! if app_file == $PROGRAM_NAME
 
   # enable :method_override
 end
