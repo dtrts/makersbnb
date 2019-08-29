@@ -3,9 +3,8 @@ feature 'Homepage' do
     visit('/')
   end
 
-  scenario 'has a title listings and a button' do
+  scenario 'has title' do
     expect(page).to have_content('MakersBnB')
-    expect(page).to have_button('List Your Space')
   end
 
   feature 'display listings' do
@@ -13,6 +12,7 @@ feature 'Homepage' do
       first_listing = find(:xpath, '//div[@class="listing"][1]')
       expect(first_listing).to have_content('My House')
       expect(first_listing).to have_content('£100.99')
+      expect(first_listing).to have_content('admin')
     end
   end
 end

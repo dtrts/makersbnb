@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/potato/code/makers/repos/makersbnb/rakefile": [
+      "/Users/hannaaikas/Projects/makersbnb/rakefile": [
         1,
         1,
         null,
@@ -17,7 +17,7 @@
         0,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/access_user_seeds_spec.rb": [
+      "/Users/hannaaikas/Projects/makersbnb/spec/access_user_seeds_spec.rb": [
         1,
         1,
         1,
@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/Viewing_homepage_spec.rb": [
+      "/Users/hannaaikas/Projects/makersbnb/spec/features/Viewing_homepage_spec.rb": [
         1,
         1,
         2,
@@ -40,9 +40,9 @@
         null,
         1,
         1,
+        null,
+        null,
         1,
-        null,
-        null,
         1,
         1,
         1,
@@ -52,26 +52,32 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/add_listings_spec.rb": [
+      "/Users/hannaaikas/Projects/makersbnb/spec/features/add_listings_spec.rb": [
         null,
         1,
         1,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         1,
         1,
-        null,
         1,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         0,
         null,
@@ -85,7 +91,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/hello_world_spec.rb": [
+      "/Users/hannaaikas/Projects/makersbnb/spec/features/hello_world_spec.rb": [
         null,
         null,
         null,
@@ -101,7 +107,7 @@
         null,
         null
       ],
-      "/Users/potato/code/makers/repos/makersbnb/spec/features/user_interactions_spec.rb": [
+      "/Users/hannaaikas/Projects/makersbnb/spec/features/user_interactions_spec.rb": [
         1,
         1,
         4,
@@ -117,8 +123,8 @@
         1,
         1,
         1,
-        null,
         1,
+        null,
         1,
         1,
         1,
@@ -143,30 +149,40 @@
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
         1,
         1,
         1,
         null,
         null,
         null
+      ],
+      "/Users/hannaaikas/Projects/makersbnb/spec/listings_have_username_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1567091651
+    "timestamp": 1567093398
   }
 }
