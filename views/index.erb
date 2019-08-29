@@ -1,54 +1,7 @@
 <html>
 
 <head>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    html,
-    body {
-      margin: 0px;
-      padding: 0px;
-
-    }
-
-    header {
-      background-image: url('/images/austin_dining.jpg');
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: cover; 
-      position: relative;
-      height: 700px;
-      padding: 200px;
-      text-align: center;
-      color: white;
-      font-size: 30px;  
-      font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-    .user-interactions {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display:flex;
-      flex-direction: row;
-      font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-    .user-welcome {
-    position:absolute;
-    direction: row;
-    width: 100px;
-    height: 50px;
-    }
-
-    .home-logo {
-      background: transparent;
-      position:absolute;
-      top: 0;
-      left: 0;
-      width: 50px;
-      height: 50px;
-    }
-  </style>
+  <link href="/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -57,7 +10,7 @@
   <header>
 
     <div class="home-logo">
-        <a href="/"><img src="/images/makersbnb.png" alt="logo" style="width:150px;height:100px;"/></a>
+      <a href="/"><img id="img-home-logo" src="/images/makersbnb.png" alt="logo" /></a>
     </div>
 
     <h1> MakersBnB </h1>
@@ -77,32 +30,43 @@
       </form>
 
 
-      
+
 
       <% else %>
 
 
       <form action="/session/new" method="get">
-        <input type="submit" value="Log In" />
+        <button type="submit">Log In</button>
       </form>
       <form action="/user/new" method="get">
-        <input type="submit" value="Sign Up" />
+        <button type="submit">Sign Up</button>
       </form>
 
       <% end %>
 
     </div>
   </header>
+  <div class="spacer">
+  </div>
 
+  <div class="listings-header">
+    <h1>Listings</h1>
+  </div>
 
   <div class='listings'>
     <% @listings.each do |listing| %>
     <div class='listing' id='listing-<%= listing.id %>'>
-      <div class='listing-name'><em><%= listing.name %></em></div>
-      <div class='listing-description'><%= listing.description %></div>
-      <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
-      <div class='listing-start-date'><%= listing.start_date %></div>
-      <div class='listing-end-date'><%= listing.end_date %></div>
+      <img class="listing-image" src="/images/listings/listing_img_001.jpg">
+      <div class="listing-details">
+
+        <div class='listing-name'>
+          <h2><%= listing.name %></h2>
+        </div>
+        <div class='listing-description'><%= listing.description %></div>
+        <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
+        <div class='listing-start-date'><%= listing.start_date %></div>
+        <div class='listing-end-date'><%= listing.end_date %></div>
+      </div>
     </div>
     <% end %>
 

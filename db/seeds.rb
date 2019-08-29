@@ -3,8 +3,8 @@ require_relative '../models/listing.rb'
 require_relative '../models/user.rb'
 
 Listing.create(
-  name: 'Old Kent Road \n#{address}\n#{phone number}\n#{email address}',
-  description: 'Do not pass go',
+  name: 'Old Kent Road',
+  description: 'Do not pass go \n#{address}\n#{phone number}\n#{email address}',
   price_per_night: '0.50',
   start_date: '2019-11-01',
   end_date: '2019-12-25'
