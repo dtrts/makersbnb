@@ -20,22 +20,22 @@ ActiveRecord::Schema.define(version: 0) do
   enable_extension 'plpgsql'
 
   # Active record commands to create the database in psql.
-  create_table 'listings', id: :serial, force: :cascade do |t|
-    t.string 'name', limit: 255
-    t.string 'description', limit: 3500
-    t.money 'price_per_night', scale: 2
-    t.date 'start_date'
-    t.date 'end_date'
-    t.string 'username', limit: 255
-    t.timestamps
-  end
-
   create_table 'users', id: :serial, force: :cascade do |t|
     t.string 'username', limit: 255
     t.string 'password_hash', limit: 255
     t.string 'name', limit: 255
     t.string 'email', limit: 255
     t.string 'telephone', limit: 255
+    t.timestamps
+  end
+  
+  create_table 'listings', id: :serial, force: :cascade do |t|
+    t.string 'name', limit: 255
+    t.string 'description', limit: 3500
+    t.money 'price_per_night', scale: 2
+    t.date 'start_date'
+    t.date 'end_date'
+    t.integer 'user_id'
     t.timestamps
   end
 
@@ -47,4 +47,5 @@ ActiveRecord::Schema.define(version: 0) do
 
   add_foreign_key :bookings, :users, on_delete: :cascade, on_update: :cascade
   add_foreign_key :bookings, :listings, on_delete: :cascade, on_update: :cascade
+  add_foreign_key :listings, :users, on_delete: :cascade, on_update: :cascade
 end
