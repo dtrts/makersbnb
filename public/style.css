@@ -91,7 +91,10 @@ form {
 
 .listings-header {
   text-align: center;
-  letter-spacing: 0.3em
+  letter-spacing: 0.1em;
+  color: #335634;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .listings {
@@ -103,24 +106,43 @@ form {
 }
 
 .listing {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   width: 300px;
   padding: 0px;
   margin: 25px;
+  color: #383838;
 }
 
 .listing-image {
   width: 100%;
-  height: 120px;
+  height: 140px;
+}
+
+.listing-name {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .listing-details {
   padding: 5px;
-
 }
 
 .listing-description {
   font-size: 90%;
-  margin: 5px 0px
+  margin: 5px 0px;
 }
 
-.listing-price-per-night {}
+.listing-price-per-night {
+  float: right;
+  font-size: 18px;
+}
+.price-text {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.availability {
+  font-family: open sans,sans-serif;
+  font-weight: 100;
+  text-decoration: underline;
+}

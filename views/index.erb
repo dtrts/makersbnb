@@ -60,15 +60,14 @@
     <div class='listing' id='listing-<%= listing.id %>'>
       <img class="listing-image" src="/images/listings/listing_img_001.jpg">
       <div class="listing-details">
-
-        <div class='listing-name'>
-          <h2><%= listing.name %></h2>
-        </div>
+        <div class='listing-name'><%= listing.name %></div>  
+        <span class='price-text'> price per night </span>
+        <span class='listing-price-per-night'>£<%= listing.price_per_night.to_f %>0</span>  
         <div class='listing-description'><%= listing.description %></div>
-        <div class='listing-price-per-night'>£<%= listing.price_per_night.to_f %></div>
-        <div class='listing-start-date'><%= listing.start_date %></div>
-        <div class='listing-end-date'><%= listing.end_date %></div>
-        <div class='listing-username'><%= listing.username %></div>
+        <div class='availability'> Availability </div>
+        <span class='listing-start-date'><%= listing.start_date %> - </span>
+        <span class='listing-end-date'><%= listing.end_date %></span>
+
       </div>
     </div>
     <% end %>
