@@ -8,7 +8,7 @@ Production
   bundle install --without=development --without=test
   RACK_ENV=production rake db:create
   RACK_ENV=production rake db:schema:load
-  rackup
+  thin -R config.ru -p 9292 start
 ```
 
 Development and Test
@@ -210,4 +210,41 @@ We would like a web application that allows users to list spaces they have avail
 - A ‘chat’ functionality once a space has been booked, allowing users whose space-booking request has been confirmed to chat with the user that owns that space
 - Basic payment implementation though Stripe.
 
-#
+##
+
+Weekly goals notes:
+
+Break down projects into tasks and allocate them to pairs.
+  - We didn't use a program like Trello or use github issues to organise our pairs and workflow
+  - A good opportunity to learn the benefits of these processes :D
+
+Build to a specification (rather than challenges)
+- TICK
+
+Run stand-ups and retrospectives
+- TICK
+
+Use a branch/PR/merge git workflow
+- TICK
+
+Give and receive meaningful code review
+- Tick?
+- Less focused due to time constraints and small groups (lots of mobbing)
+
+
+High Level Skills:
+
+Can you use the XP values to guide your behaviour?
+- Simplicity: TICK
+- Communication: TICK Stand ups and retros.
+- Feedback: TICK Showed the code every morning. Changed our processes in pairing
+- Respect: TICK Lots of enthusiasm.
+- Courage: TICK Starting this week required courage
+
+Can you follow the full developer workflow? (Creating issues, branching, reviewing, squirrelling, merging.)
+- Yes to: Branching, Reviewing and Merging
+- Still to try: Creating Issues and Squirrelling/ Stashing?
+
+Can you keep code quality and test coverage high whilst building new features?
+- Uuuuh YES... It was an exploratory process in design. Test have been written eventually.
+- We are deployable due to Travis.
