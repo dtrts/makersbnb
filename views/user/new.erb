@@ -1,6 +1,6 @@
 <h1>Let's get to know you</h1>
 
-<form class="form-container" action="/user/new" method="post">
+<form class="form-container" name="sign_up" action="/user/new" onsubmit="return validateForm()" method="post">
   <label>Username:<input name="username" type="text"></label>
   <label>Password:<input name="password" type="password"></label>
   <label>Name:<input name="name" type="text"></label>

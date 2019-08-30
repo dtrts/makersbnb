@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
     @password = Password.create(new_password)
     self.password_hash = @password
   end
+
+  # validates :username, :uniqueness => {
+  # :message => "Username Taken. Please try again." }
 end

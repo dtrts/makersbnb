@@ -60,8 +60,17 @@ feature 'User interactions' do
       expect(page).to have_button('Log Out')
     end
 
-    # scenario 'new user uses already existing username' do
-    #   click_button('Log Out')
-    # end
+     scenario 'new user uses already existing username' do
+       click_button('Log Out')
+       click_button('Sign Up')
+       fill_in('Username:', with: 'coffee_cup')
+       fill_in('Password:', with: 'java')
+       fill_in('Name:', with: 'Ms. Coffee')
+       fill_in('Email:', with: 'coffee@jitters.org')
+       fill_in('Telephone:', with: '+441234567890')
+       click_button('Submit')
+      
+       expect(page).to have_content('Username Taken. Please try again.')
+     end
   end
 end
