@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <link href="/style_header.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="home-logo">
+      <a href="/"><img id="img-home-logo" src="/images/makersbnb.png" alt="logo" /></a>
+    </div>
+
+    <div class="user-interactions">
+      <% if @user %>
+
+      <div class="user-welcome">Hello, <%= @user.name %> </div>
+      <div class="fun-buttons">
+        <form class="list_space" action="/listings/new" action="get">
+          <button type="submit">List Your Space</button>
+        </form>
+      </div>
+      <div class="fun-buttons">
+        <form action="/session" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button type="submit">Log Out</button>
+        </form>
+      </div>
+
+      <% else %>
+
+      <div class="fun-buttons">
+        <form action="/session/new" method="get">
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+      <div class="fun-buttons">
+        <form action="/user/new" method="get">
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <% end %>
+
+    </div>
+  </header>
+
+  <div class="main">
+    <%= yield %>
+  </div>
+</body>

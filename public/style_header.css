@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.main {
+  margin: auto;
+}
+
+header {
+  background-image: url('/images/austin_dining.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  height: 77px;
+  overflow: hidden;
+}
+
+form {
+  margin: 0;
+}
+
+.user-interactions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.home-logo {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fun-buttons form button,
+.user-welcome {
+  padding: 0.7em 1em;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  border: none;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+
+.fun-buttons:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+
+
+.fun-buttons:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.fun-buttons:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+#img-home-logo {
+  width: 200px;
+}
+
+
+
+
+
+h1 {
+  color: #469d49;
+  text-align: center;
+  padding-top: 40px;
+
+}
