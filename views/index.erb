@@ -61,7 +61,7 @@
       <img class="listing-image" src="/images/listings/listing_img_001.jpg">
       <div class="listing-details">
         <div class='listing-name'><%= listing.name %></div>
-        <div class='listing-username'><%= listing.username %></div>
+        <div class='listing-username'>Hosted by: <%= listing.username %></div>
         <span class='price-text'> price per night </span>
         <span class='listing-price-per-night'>£<%= listing.price_per_night.to_f %>0</span>
         <div class='listing-description'><%= listing.description %></div>
