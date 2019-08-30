@@ -41,8 +41,12 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/validate/new' do
-    # 3. CHECK IF USERNAME IS DUPLICATE
-    # 4. RETURN TRUE/FALSE
+    @user = User.find_by_username(params[:username])
+    if @user
+      return 'true'
+    else
+      return 'false'
+    end
   end
 
   get '/user/new' do

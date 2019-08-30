@@ -1,7 +1,16 @@
-$(document).ready(function() {
-  // do stuff;
-});
+function validateForm() {
+  var x = document.forms["sign_up"]["username"].value;
 
-// 1. WAIT FOR USER TO SUBMIT CLICK
-// 2. SEND USERNAME ONLY TO SERVER
-// 5. GETS BACK TRUE/FALSE
+  $.get( '/validate/new', { username: username }).done(
+    function(data) { console.log(data);
+      if (data == 'true') {
+        alert("Username Taken. Please try again.");
+        return false;
+      } else {
+        return true
+      };
+
+    } );
+
+
+};
