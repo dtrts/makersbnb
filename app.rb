@@ -6,6 +6,7 @@ require 'sinatra/activerecord'
 require 'active_record'
 require_relative './models/listing.rb'
 require_relative './models/user.rb'
+require_relative './models/booking.rb'
 
 class MakersBnB < Sinatra::Base
   register Sinatra::Reloader
@@ -72,6 +73,16 @@ class MakersBnB < Sinatra::Base
     @user = User.find(session[:user_id]) if session[:user_id]
     Listing.create(name: params[:name], description: params[:description], price_per_night: params[:price_per_night], start_date: params[:start_date], end_date: params[:end_date], username: @user.username)
     redirect '/'
+  end
+
+  post '/bookings/new/listing/:listing_id' do
+    puts 'makes it to put'
+    Booking.create(user_id: session[:user_id], listing_id: params[:listing_id])
+    redirect('/bookings/confirmation')
+  end
+
+  get '/bookings/confirmation' do
+    erb :"bookings/confirmation", layout: :"layouts/header"
   end
 
   run! if app_file == $PROGRAM_NAME

@@ -38,4 +38,13 @@ ActiveRecord::Schema.define(version: 0) do
     t.string 'telephone', limit: 255
     t.timestamps
   end
+
+  create_table 'bookings', id: :serial, force: :cascade do |t|
+    t.integer 'user_id'
+    t.integer 'listing_id'
+    t.timestamps
+  end
+
+  add_foreign_key :bookings, :users, on_delete: :cascade, on_update: :cascade
+  add_foreign_key :bookings, :listings, on_delete: :cascade, on_update: :cascade
 end
