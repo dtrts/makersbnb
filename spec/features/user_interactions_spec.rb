@@ -28,7 +28,9 @@ feature 'User interactions' do
   end
 
   feature 'user sign up' do
-    scenario 'new user creation' do
+
+    before(:each) do
+      visit('/')
       click_button('Sign Up')
       fill_in('Username:', with: 'coffee_cup')
       fill_in('Password:', with: 'java')
@@ -36,6 +38,9 @@ feature 'User interactions' do
       fill_in('Email:', with: 'coffee@jitters.org')
       fill_in('Telephone:', with: '+441234567890')
       click_button('Submit')
+    end
+
+    scenario 'new user creation' do
       expect(page).to have_current_path('/')
       expect(page).to have_button('List Your Space')
       expect(page).to have_content('Ms. Coffee')
@@ -43,13 +48,6 @@ feature 'User interactions' do
     end
 
     scenario 'new user creation' do
-      click_button('Sign Up')
-      fill_in('Username:', with: 'coffee_cup')
-      fill_in('Password:', with: 'java')
-      fill_in('Name:', with: 'Ms. Coffee')
-      fill_in('Email:', with: 'coffee@jitters.org')
-      fill_in('Telephone:', with: '+441234567890')
-      click_button('Submit')
       click_button('Log Out')
       click_button('Log In')
       fill_in('Username:', with: 'coffee_cup')
@@ -61,5 +59,9 @@ feature 'User interactions' do
       expect(page).to have_content('Ms. Coffee')
       expect(page).to have_button('Log Out')
     end
+
+    # scenario 'new user uses already existing username' do
+    #   click_button('Log Out')
+    # end
   end
 end

@@ -113,7 +113,7 @@ Technical Notes:
 
 This is not included in v1 but should be taken into consideration to allow extensibility of product.
 
-Validation:
+Validation for listing input:
   - Name : length < 255 characters
   - Description : length < 3500 characters
   - Price per night : is a number (xxxx.xx)
@@ -122,6 +122,11 @@ Validation:
 Tables:
 listing (id serial primary key ,name varchar(255),description varchar(255), price_per_night decimal(5,2) ,start_date ,end_date)
 dates available? (id serial primary key , listing_id integer ,start_date date ,end_date  date)
+
+Validation for sign up:
+- Username  
+length < 100 characters
+Not already in use
 
 
 ## Wire frames
