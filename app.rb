@@ -52,9 +52,13 @@ class MakersBnB < Sinatra::Base
       email: params[:email],
       telephone: params[:telephone]
     )
+
     @user.password = params[:password]
+
     @user.save!
+
     session[:user_id] = @user.id
+
     redirect('/')
   end
 
