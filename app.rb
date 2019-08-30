@@ -40,6 +40,11 @@ class MakersBnB < Sinatra::Base
     redirect('/')
   end
 
+  get '/validate/new' do
+    # 3. CHECK IF USERNAME IS DUPLICATE
+    # 4. RETURN TRUE/FALSE
+  end
+
   get '/user/new' do
     @user = User.find(session[:user_id]) if session[:user_id]
     erb :"user/new", layout: :"layouts/forms"

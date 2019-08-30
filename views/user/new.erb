@@ -1,10 +1,18 @@
-<h1>Let's get to know you</h1>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/interface.js"></script>
+</head>
 
-<form class="form-container" name="sign_up" action="/user/new" onsubmit="return validateForm()" method="post">
-  <label>Username:<input name="username" type="text"></label>
-  <label>Password:<input name="password" type="password"></label>
-  <label>Name:<input name="name" type="text"></label>
-  <label>Email:<input name="email" type="text"></label>
-  <label>Telephone:<input name="telephone" type="text"></label>
-  <button class="form-submit" type="submit">Submit</button>
-</form>
+<body>
+  <h1>Let's get to know you</h1>
+
+  <form class="form-container" name="sign_up" action="/user/new" onsubmit="return validateForm()" method="post">
+    <label>Username:<input name="username" type="text"></label>
+    <label>Password:<input name="password" type="password"></label>
+    <label>Name:<input name="name" type="text"></label>
+    <label>Email:<input name="email" type="text"></label>
+    <label>Telephone:<input name="telephone" type="text"></label>
+    <button class="form-submit" type="submit">Submit</button>
+  </form>
+
+</body>
