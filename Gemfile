@@ -6,7 +6,7 @@ ruby '2.6.3'
 
 gem "rack", "~> 2.0"
 gem "sinatra", "~> 2.0"
-gem "activerecord", "~> 5.0"
+gem "activerecord", "~> 5.2"
 gem "sinatra-activerecord", "~> 2.0"
 gem "rake", "~> 12.3"
 gem "pg", "~> 1.1"
